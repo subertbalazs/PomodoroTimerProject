@@ -186,20 +186,19 @@ namespace Promodoro
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
-            workTimer.Stop();
             workCurrentMinuteCount = 1;
             workCurrentSecondCount = 5;
-            restCurrentMinuteCount = 1;
-            restCurrentSecondCount = 5;
-            restTimer.Stop();
-            workTimer.Start();
 
+            workTimer.Start();
+            
             workMinuteBlock.Visibility = Visibility.Visible;
             workSecondBlock.Visibility = Visibility.Visible;
             restMinuteBlock.Visibility = Visibility.Collapsed;
             restSecondBlock.Visibility = Visibility.Collapsed;
             colon2.Visibility = Visibility.Collapsed;
             colonBlock.Visibility = Visibility.Visible;
+
+            
         }
     }
 
