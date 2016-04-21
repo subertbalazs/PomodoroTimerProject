@@ -15,7 +15,7 @@ using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
 
-namespace TimerEm2
+namespace Promodoro
 {
     public sealed partial class MainPage : Page
     {
@@ -24,10 +24,10 @@ namespace TimerEm2
         DispatcherTimer restTimer = new DispatcherTimer();
 
         int workCurrentSecondCount;
-        int workCurrentMinuteCount = 25;
+        int workCurrentMinuteCount = 1;
 
         int restCurrentSecondCount;
-        int restCurrentMinuteCount = 5;
+        int restCurrentMinuteCount = 1;
 
         public MainPage()
         {
@@ -38,6 +38,10 @@ namespace TimerEm2
             
             restTimer.Interval = new TimeSpan(0, 0, 0, 1, 0);
             restTimer.Tick += RestTimer_Tick;
+
+            restMinuteBlock.Visibility = Visibility.Collapsed;
+            restSecondBlock.Visibility = Visibility.Collapsed;
+            colon2.Visibility = Visibility.Collapsed;
 
         }
 
@@ -71,26 +75,24 @@ namespace TimerEm2
             restTimer.Start();
         }
 
-        private int ChangeMinuteCheckerWork()
+        private void ChangeMinuteCheckerWork()
         {
-            if (workCurrentSecondCount == 0)
+            if (workCurrentSecondCount == -1)
             {
-                workCurrentSecondCount = 59;
+                workCurrentSecondCount = 5;
                 workCurrentMinuteCount --;
                 IsItLessThenTenWorkMIN();
             }
-            return workCurrentMinuteCount;
         }
 
-        private int ChangeMinuteCheckerRest()
+        private void ChangeMinuteCheckerRest()
         {
-            if (restCurrentSecondCount == 0)
+            if (restCurrentSecondCount == -1)
             {
-                restCurrentSecondCount = 59;
+                restCurrentSecondCount = 5;
                 restCurrentMinuteCount--;
                 IsItLessThenTenRestMIN();
             }
-            return restCurrentMinuteCount;
         }
 
         private void WorkTimeIncrementer()
@@ -143,28 +145,62 @@ namespace TimerEm2
     
         private void WorkEndChecker()
         {
-            if (workCurrentMinuteCount <= 0 && workCurrentSecondCount <= 0)
+            if (workCurrentMinuteCount == 0 && workCurrentSecondCount == -1)
             {
                 workTimer.Stop();
                 workCurrentMinuteCount = 1;
                 restTimer.Start();
                 startButton.Visibility = Visibility.Collapsed;
                 btnStartRest.Visibility = Visibility.Visible;
+
+                workMinuteBlock.Visibility = Visibility.Collapsed;
+                workSecondBlock.Visibility = Visibility.Collapsed;
+
+                restMinuteBlock.Visibility = Visibility.Visible;
+                restSecondBlock.Visibility = Visibility.Visible;
+                colon2.Visibility = Visibility.Visible;
+                colonBlock.Visibility = Visibility.Collapsed;
             }
         }
 
         private void RestEndChecker()
         {
-            if (restCurrentMinuteCount <= 0 && restCurrentSecondCount <= 0)
+            if (restCurrentMinuteCount == 0 && restCurrentSecondCount == -1)
             {
                 restTimer.Stop();
                 restCurrentMinuteCount = 1;
                 workTimer.Start();
                 btnStartRest.Visibility = Visibility.Collapsed;
                 startButton.Visibility = Visibility.Visible;
+
+                workMinuteBlock.Visibility = Visibility.Visible;
+                workSecondBlock.Visibility = Visibility.Visible;
+                colonBlock.Visibility = Visibility.Visible;
+                startButton.Visibility = Visibility.Visible;
+                restMinuteBlock.Visibility = Visibility.Collapsed;
+                restSecondBlock.Visibility = Visibility.Collapsed;
+                colon2.Visibility = Visibility.Collapsed;
+
             }
         }
 
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
+            workTimer.Stop();
+            workCurrentMinuteCount = 1;
+            workCurrentSecondCount = 5;
+            restCurrentMinuteCount = 1;
+            restCurrentSecondCount = 5;
+            restTimer.Stop();
+            workTimer.Start();
+
+            workMinuteBlock.Visibility = Visibility.Visible;
+            workSecondBlock.Visibility = Visibility.Visible;
+            restMinuteBlock.Visibility = Visibility.Collapsed;
+            restSecondBlock.Visibility = Visibility.Collapsed;
+            colon2.Visibility = Visibility.Collapsed;
+            colonBlock.Visibility = Visibility.Visible;
+        }
     }
 
 }

@@ -11,7 +11,6 @@
       <RootProperty Name="Background" />
       <RootProperty Name="Children" />
     </RootType>
-    <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.ThemeResourceExtension" />
     <RootType FullName="Windows.UI.Xaml.Controls.Button">
       <RootProperty Name="Content" />
       <RootProperty Name="HorizontalAlignment" />
@@ -31,8 +30,9 @@
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="FontSize" />
       <RootProperty Name="Width" />
+      <RootProperty Name="Foreground" />
       <RootProperty Name="Height" />
     </RootType>
-    <RootType FullName="TimerEm2.MainPage" />
+    <RootType FullName="Promodoro.MainPage" />
   </Roots.RootTypes>
 </Roots>

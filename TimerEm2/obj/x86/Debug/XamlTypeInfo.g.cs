@@ -9,11 +9,11 @@
 
 
 
-namespace TimerEm2
+namespace Promodoro
 {
     public partial class App : global::Windows.UI.Xaml.Markup.IXamlMetadataProvider
     {
-    private global::TimerEm2.TimerEm2_XamlTypeInfo.XamlTypeInfoProvider _provider;
+    private global::TimerEm2.Promodoro_XamlTypeInfo.XamlTypeInfoProvider _provider;
 
         /// <summary>
         /// GetXamlType(Type)
@@ -22,7 +22,7 @@ namespace TimerEm2
         {
             if(_provider == null)
             {
-                _provider = new global::TimerEm2.TimerEm2_XamlTypeInfo.XamlTypeInfoProvider();
+                _provider = new global::TimerEm2.Promodoro_XamlTypeInfo.XamlTypeInfoProvider();
             }
             return _provider.GetXamlTypeByType(type);
         }
@@ -34,7 +34,7 @@ namespace TimerEm2
         {
             if(_provider == null)
             {
-                _provider = new global::TimerEm2.TimerEm2_XamlTypeInfo.XamlTypeInfoProvider();
+                _provider = new global::TimerEm2.Promodoro_XamlTypeInfo.XamlTypeInfoProvider();
             }
             return _provider.GetXamlTypeByName(fullName);
         }
@@ -49,7 +49,7 @@ namespace TimerEm2
     }
 }
 
-namespace TimerEm2.TimerEm2_XamlTypeInfo
+namespace TimerEm2.Promodoro_XamlTypeInfo
 {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 14.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -133,12 +133,12 @@ namespace TimerEm2.TimerEm2_XamlTypeInfo
         private void InitTypeTables()
         {
             _typeNameTable = new string[3];
-            _typeNameTable[0] = "TimerEm2.MainPage";
+            _typeNameTable[0] = "Promodoro.MainPage";
             _typeNameTable[1] = "Windows.UI.Xaml.Controls.Page";
             _typeNameTable[2] = "Windows.UI.Xaml.Controls.UserControl";
 
             _typeTable = new global::System.Type[3];
-            _typeTable[0] = typeof(global::TimerEm2.MainPage);
+            _typeTable[0] = typeof(global::Promodoro.MainPage);
             _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.Page);
             _typeTable[2] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
         }
@@ -175,31 +175,31 @@ namespace TimerEm2.TimerEm2_XamlTypeInfo
             return -1;
         }
 
-        private object Activate_0_MainPage() { return new global::TimerEm2.MainPage(); }
+        private object Activate_0_MainPage() { return new global::Promodoro.MainPage(); }
 
         private global::Windows.UI.Xaml.Markup.IXamlType CreateXamlType(int typeIndex)
         {
-            global::TimerEm2.TimerEm2_XamlTypeInfo.XamlSystemBaseType xamlType = null;
-            global::TimerEm2.TimerEm2_XamlTypeInfo.XamlUserType userType;
+            global::TimerEm2.Promodoro_XamlTypeInfo.XamlSystemBaseType xamlType = null;
+            global::TimerEm2.Promodoro_XamlTypeInfo.XamlUserType userType;
             string typeName = _typeNameTable[typeIndex];
             global::System.Type type = _typeTable[typeIndex];
 
             switch (typeIndex)
             {
 
-            case 0:   //  TimerEm2.MainPage
-                userType = new global::TimerEm2.TimerEm2_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+            case 0:   //  Promodoro.MainPage
+                userType = new global::TimerEm2.Promodoro_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
                 userType.Activator = Activate_0_MainPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
             case 1:   //  Windows.UI.Xaml.Controls.Page
-                xamlType = new global::TimerEm2.TimerEm2_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                xamlType = new global::TimerEm2.Promodoro_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
             case 2:   //  Windows.UI.Xaml.Controls.UserControl
-                xamlType = new global::TimerEm2.TimerEm2_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                xamlType = new global::TimerEm2.Promodoro_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
             }
             return xamlType;
@@ -209,7 +209,7 @@ namespace TimerEm2.TimerEm2_XamlTypeInfo
 
         private global::Windows.UI.Xaml.Markup.IXamlMember CreateXamlMember(string longMemberName)
         {
-            global::TimerEm2.TimerEm2_XamlTypeInfo.XamlMember xamlMember = null;
+            global::TimerEm2.Promodoro_XamlTypeInfo.XamlMember xamlMember = null;
             // No Local Properties
             return xamlMember;
         }
@@ -264,9 +264,9 @@ namespace TimerEm2.TimerEm2_XamlTypeInfo
 
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 14.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-    internal class XamlUserType : global::TimerEm2.TimerEm2_XamlTypeInfo.XamlSystemBaseType
+    internal class XamlUserType : global::TimerEm2.Promodoro_XamlTypeInfo.XamlSystemBaseType
     {
-        global::TimerEm2.TimerEm2_XamlTypeInfo.XamlTypeInfoProvider _provider;
+        global::TimerEm2.Promodoro_XamlTypeInfo.XamlTypeInfoProvider _provider;
         global::Windows.UI.Xaml.Markup.IXamlType _baseType;
         bool _isArray;
         bool _isMarkupExtension;
@@ -280,7 +280,7 @@ namespace TimerEm2.TimerEm2_XamlTypeInfo
         global::System.Collections.Generic.Dictionary<string, string> _memberNames;
         global::System.Collections.Generic.Dictionary<string, object> _enumValues;
 
-        public XamlUserType(global::TimerEm2.TimerEm2_XamlTypeInfo.XamlTypeInfoProvider provider, string fullName, global::System.Type fullType, global::Windows.UI.Xaml.Markup.IXamlType baseType)
+        public XamlUserType(global::TimerEm2.Promodoro_XamlTypeInfo.XamlTypeInfoProvider provider, string fullName, global::System.Type fullType, global::Windows.UI.Xaml.Markup.IXamlType baseType)
             :base(fullName, fullType)
         {
             _provider = provider;
@@ -472,7 +472,7 @@ namespace TimerEm2.TimerEm2_XamlTypeInfo
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     internal class XamlMember : global::Windows.UI.Xaml.Markup.IXamlMember
     {
-        global::TimerEm2.TimerEm2_XamlTypeInfo.XamlTypeInfoProvider _provider;
+        global::TimerEm2.Promodoro_XamlTypeInfo.XamlTypeInfoProvider _provider;
         string _name;
         bool _isAttachable;
         bool _isDependencyProperty;
@@ -481,7 +481,7 @@ namespace TimerEm2.TimerEm2_XamlTypeInfo
         string _typeName;
         string _targetTypeName;
 
-        public XamlMember(global::TimerEm2.TimerEm2_XamlTypeInfo.XamlTypeInfoProvider provider, string name, string typeName)
+        public XamlMember(global::TimerEm2.Promodoro_XamlTypeInfo.XamlTypeInfoProvider provider, string name, string typeName)
         {
             _name = name;
             _typeName = typeName;

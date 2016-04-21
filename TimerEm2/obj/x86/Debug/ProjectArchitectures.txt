@@ -1,1 +1,1 @@
-C:\DEV\CKeritesProjects\TimerEm2\TimerEm2\TimerEm2.csproj;x86
+C:\DEV\CKeritesProjects\TimerEm2\TimerEm2\Promodoro.csproj;x86

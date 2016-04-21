@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimerEm2", "TimerEm2\TimerEm2.csproj", "{9A2EDE3E-3886-4F10-9C54-35E4908E2A16}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Promodoro", "TimerEm2\Promodoro.csproj", "{9A2EDE3E-3886-4F10-9C54-35E4908E2A16}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
