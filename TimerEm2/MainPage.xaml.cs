@@ -23,11 +23,15 @@ namespace Promodoro
 
         DispatcherTimer restTimer = new DispatcherTimer();
 
+        static int workStarterSecondCount = 5;
+        static int workStarterMinuteCount = 1;
         int workCurrentSecondCount;
-        int workCurrentMinuteCount = 1;
+        int workCurrentMinuteCount = workStarterMinuteCount;
 
+        static int restStarterSecondCount = 5;
+        static int restStarterMinuteCount = 1;
         int restCurrentSecondCount;
-        int restCurrentMinuteCount = 1;
+        int restCurrentMinuteCount = restStarterMinuteCount;
 
         public MainPage()
         {
@@ -41,22 +45,22 @@ namespace Promodoro
 
             restMinuteBlock.Visibility = Visibility.Collapsed;
             restSecondBlock.Visibility = Visibility.Collapsed;
-            colon2.Visibility = Visibility.Collapsed;
+            restColonBlock.Visibility = Visibility.Collapsed;
 
         }
 
         private void WorkTimer_Tick(object sender, object e)
         {
-            ChangeMinuteCheckerWork();
+            WorkMinuteChanger();
             WorkTimeIncrementer();
             WorkEndChecker();
         }
 
         private void RestTimer_Tick(object sender, object e)
         {
-            ChangeMinuteCheckerRest();
+            RestMinuteChanger();
             RestTimeIncrementer();
-            RestEndChecker();
+            TimerSequenceRepeater();
         }
 
         private void startButton_Click(object sender, RoutedEventArgs e)
@@ -75,24 +79,34 @@ namespace Promodoro
             restTimer.Start();
         }
 
-        private void ChangeMinuteCheckerWork()
+        private void WorkMinuteChanger()
         {
             if (workCurrentSecondCount == -1)
             {
-                workCurrentSecondCount = 5;
-                workCurrentMinuteCount --;
-                IsItLessThenTenWorkMIN();
+                workCurrentSecondCount = workStarterSecondCount;
+                WorkMinuteIncrementer();
+                IsItLessThenTenWorkMinute();
             }
         }
 
-        private void ChangeMinuteCheckerRest()
+        private void WorkMinuteIncrementer()
+        {
+            workCurrentMinuteCount--;
+        }
+
+        private void RestMinuteChanger()
         {
             if (restCurrentSecondCount == -1)
             {
-                restCurrentSecondCount = 5;
-                restCurrentMinuteCount--;
-                IsItLessThenTenRestMIN();
+                restCurrentSecondCount = restStarterSecondCount;
+                RestMinuteIncrementer();
+                IsItLessThenTenRestMinute();
             }
+        }
+
+        private void RestMinuteIncrementer()
+        {
+               restCurrentMinuteCount--;
         }
 
         private void WorkTimeIncrementer()
@@ -119,7 +133,7 @@ namespace Promodoro
             }
         }
 
-        private void IsItLessThenTenWorkMIN()
+        private void IsItLessThenTenWorkMinute()
         {
             if (workCurrentMinuteCount < 10)
             {
@@ -131,7 +145,7 @@ namespace Promodoro
             }
         }
 
-        private void IsItLessThenTenRestMIN()
+        private void IsItLessThenTenRestMinute()
         {
             if (restCurrentMinuteCount < 10)
             {
@@ -147,19 +161,19 @@ namespace Promodoro
         {
             if (workCurrentMinuteCount == 0 && workCurrentSecondCount == -1)
             {
+                mediaElement.Play();
                 workTimer.Stop();
-                workCurrentMinuteCount = 1;
-                restTimer.Start();
-                startButton.Visibility = Visibility.Collapsed;
-                btnStartRest.Visibility = Visibility.Visible;
+                workCurrentMinuteCount = workStarterMinuteCount;
 
+                restTimer.Start();
+                btnStartWork.Visibility = Visibility.Collapsed;
+                btnStartRest.Visibility = Visibility.Visible;
                 workMinuteBlock.Visibility = Visibility.Collapsed;
                 workSecondBlock.Visibility = Visibility.Collapsed;
-
                 restMinuteBlock.Visibility = Visibility.Visible;
                 restSecondBlock.Visibility = Visibility.Visible;
-                colon2.Visibility = Visibility.Visible;
-                colonBlock.Visibility = Visibility.Collapsed;
+                restColonBlock.Visibility = Visibility.Visible;
+                workColonBlock.Visibility = Visibility.Collapsed;
             }
         }
 
@@ -167,39 +181,35 @@ namespace Promodoro
         {
             if (restCurrentMinuteCount == 0 && restCurrentSecondCount == -1)
             {
+                mediaElement.Play();
                 restTimer.Stop();
-                restCurrentMinuteCount = 1;
+                restCurrentMinuteCount = restStarterMinuteCount;
+
                 workTimer.Start();
                 btnStartRest.Visibility = Visibility.Collapsed;
-                startButton.Visibility = Visibility.Visible;
+                btnStartWork.Visibility = Visibility.Visible;
 
                 workMinuteBlock.Visibility = Visibility.Visible;
                 workSecondBlock.Visibility = Visibility.Visible;
-                colonBlock.Visibility = Visibility.Visible;
-                startButton.Visibility = Visibility.Visible;
+                workColonBlock.Visibility = Visibility.Visible;
+                btnStartWork.Visibility = Visibility.Visible;
                 restMinuteBlock.Visibility = Visibility.Collapsed;
                 restSecondBlock.Visibility = Visibility.Collapsed;
-                colon2.Visibility = Visibility.Collapsed;
-
+                restColonBlock.Visibility = Visibility.Collapsed;
             }
         }
 
-        private void button_Click(object sender, RoutedEventArgs e)
+        private void TimerSequenceRepeater()
         {
-            workCurrentMinuteCount = 1;
-            workCurrentSecondCount = 5;
-
-            workTimer.Start();
-            
-            workMinuteBlock.Visibility = Visibility.Visible;
-            workSecondBlock.Visibility = Visibility.Visible;
-            restMinuteBlock.Visibility = Visibility.Collapsed;
-            restSecondBlock.Visibility = Visibility.Collapsed;
-            colon2.Visibility = Visibility.Collapsed;
-            colonBlock.Visibility = Visibility.Visible;
-
-            
+            if (repeaterBox.IsChecked.Value)
+            {
+                RestEndChecker();
+            }
+            else
+            {
+                RestEndChecker();
+                workTimer.Stop();
+            }
         }
     }
-
 }

@@ -342,6 +342,9 @@
     <AppxPackagedFile Include="C:\DEV\CKeritesProjects\TimerEm2\TimerEm2\ApplicationInsights.config">
       <PackagePath>ApplicationInsights.config</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\DEV\CKeritesProjects\TimerEm2\TimerEm2\Assets\beep-03.wav">
+      <PackagePath>Assets\beep-03.wav</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\DEV\CKeritesProjects\TimerEm2\TimerEm2\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
     </AppxPackagedFile>

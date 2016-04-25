@@ -193,3 +193,4 @@ C:\DEV\CKeritesProjects\TimerEm2\TimerEm2\obj\x86\Debug\qualifiers.txt
 C:\DEV\CKeritesProjects\TimerEm2\TimerEm2\obj\x86\Debug\qualifiers.txt.intermediate
 C:\DEV\CKeritesProjects\TimerEm2\TimerEm2\obj\x86\Debug\MultipleQualifiersPerDimensionFound.txt
 C:\DEV\CKeritesProjects\TimerEm2\TimerEm2\obj\x86\Debug\ProjectArchitectures.txt
+C:\DEV\CKeritesProjects\TimerEm2\TimerEm2\obj\x86\Debug\Promodoro.csprojResolveAssemblyReference.cache

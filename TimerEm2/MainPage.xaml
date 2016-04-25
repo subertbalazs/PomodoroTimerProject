@@ -9,15 +9,16 @@
 
     <Grid Background="#FFFFFFFF">
         <Button x:Name="stopButton" Content="Stop" HorizontalAlignment="Left" Margin="23,324,0,0" VerticalAlignment="Top" Click="stopButton_Click" FontSize="40" Width="138"/>
-        <Button x:Name="startButton" Content="Start" HorizontalAlignment="Left" Margin="198,324,0,0" VerticalAlignment="Top" Click="startButton_Click" FontSize="40" Width="140"/>
+        <Button x:Name="btnStartWork" Content="Start" HorizontalAlignment="Left" Margin="198,324,0,0" VerticalAlignment="Top" Click="startButton_Click" FontSize="40" Width="140"/>
         <TextBlock x:Name="workSecondBlock" HorizontalAlignment="Left" Margin="206,138,0,0" TextWrapping="Wrap" Text="00" VerticalAlignment="Top" FontSize="133.333" Width="154" Foreground="#FFF90101"/>
         <TextBlock x:Name="workMinuteBlock" HorizontalAlignment="Left" Margin="8,138,0,0" TextWrapping="Wrap" Text="25" VerticalAlignment="Top" FontSize="133.333" Width="145" Height="177" Foreground="#FFFB1700"/>
-        <TextBlock x:Name="colonBlock" HorizontalAlignment="Left" Margin="167,121,0,0" TextWrapping="Wrap" Text=":" VerticalAlignment="Top" FontSize="133.333" Foreground="#FFF91701"/>
+        <TextBlock x:Name="workColonBlock" HorizontalAlignment="Left" Margin="167,121,0,0" TextWrapping="Wrap" Text=":" VerticalAlignment="Top" FontSize="133.333" Foreground="#FFF91701"/>
         <TextBlock x:Name="restSecondBlock" HorizontalAlignment="Left" Margin="206,138,0,0" TextWrapping="Wrap" Text="00" VerticalAlignment="Top" FontSize="133.333" Foreground="#FF00AA10"/>
         <TextBlock x:Name="restMinuteBlock" HorizontalAlignment="Left" Margin="8,138,0,0" TextWrapping="Wrap" Text="05" VerticalAlignment="Top" FontSize="133.333" Foreground="#FF08B000"/>
         <Button x:Name="btnStartRest" Content="Start" HorizontalAlignment="Left" Margin="198,324,0,0" VerticalAlignment="Top" Height="65" Width="140" FontSize="40" Click="btnStartRest_Click" Visibility="Collapsed"/>
-        <Button x:Name="button" Content="Restart period" HorizontalAlignment="Left" Margin="23,405,0,0" VerticalAlignment="Top" FontSize="40" Width="315" Click="button_Click"/>
-        <TextBlock x:Name="colon2" HorizontalAlignment="Left" Margin="167,121,0,0" TextWrapping="Wrap" Text=":" VerticalAlignment="Top" Foreground="#FF00AA10" FontSize="133.333"/>
+        <TextBlock x:Name="restColonBlock" HorizontalAlignment="Left" Margin="167,121,0,0" TextWrapping="Wrap" Text=":" VerticalAlignment="Top" Foreground="#FF00AA10" FontSize="133.333"/>
+        <CheckBox x:Name="repeaterBox" Content="Repeat timer sequence forever" HorizontalAlignment="Left" Margin="23,394,0,0" VerticalAlignment="Top" FontSize="20" Width="315"/>
+        <MediaElement x:Name="mediaElement" HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="100" Source="Assets/beep-03.wav" AutoPlay="False"/>
 
     </Grid>
 </Page>
