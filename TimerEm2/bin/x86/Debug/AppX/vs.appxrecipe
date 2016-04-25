@@ -22,13 +22,13 @@
     <AppXManifest Include="C:\DEV\CKeritesProjects\TimerEm2\TimerEm2\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2016-04-25T20:19:29.919</Modified>
+      <Modified>2016-04-25T20:51:43.304</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\DEV\CKeritesProjects\TimerEm2\TimerEm2\bin\x86\Debug\TimerEm2.exe">
       <PackagePath>entrypoint\TimerEm2.exe</PackagePath>
-      <Modified>2016-04-25T20:19:29.615</Modified>
+      <Modified>2016-04-25T20:51:42.483</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Balázs\.nuget\packages\Microsoft.ApplicationInsights\1.0.0\lib\portable-win81+wpa81\Microsoft.ApplicationInsights.dll">
       <PackagePath>Microsoft.ApplicationInsights.dll</PackagePath>
@@ -502,7 +502,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\DEV\CKeritesProjects\TimerEm2\TimerEm2\bin\x86\Debug\TimerEm2.xr.xml">
       <PackagePath>TimerEm2.xr.xml</PackagePath>
-      <Modified>2016-04-25T20:18:23.299</Modified>
+      <Modified>2016-04-25T20:51:42.256</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -510,11 +510,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\DEV\CKeritesProjects\TimerEm2\TimerEm2\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2016-04-25T20:18:24.857</Modified>
+      <Modified>2016-04-25T20:51:43.105</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\DEV\CKeritesProjects\TimerEm2\TimerEm2\bin\x86\Debug\Core\TimerEm2.exe">
       <PackagePath>TimerEm2.exe</PackagePath>
-      <Modified>2016-04-25T20:19:29.910</Modified>
+      <Modified>2016-04-25T20:51:43.303</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
