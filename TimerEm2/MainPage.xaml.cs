@@ -45,7 +45,7 @@ namespace Promodoro
 
             restMinuteBlock.Visibility = Visibility.Collapsed;
             restSecondBlock.Visibility = Visibility.Collapsed;
-            restColonBlock.Visibility = Visibility.Collapsed;
+            //restColonBlock.Visibility = Visibility.Collapsed;
 
         }
 
@@ -172,8 +172,8 @@ namespace Promodoro
                 workSecondBlock.Visibility = Visibility.Collapsed;
                 restMinuteBlock.Visibility = Visibility.Visible;
                 restSecondBlock.Visibility = Visibility.Visible;
-                restColonBlock.Visibility = Visibility.Visible;
-                workColonBlock.Visibility = Visibility.Collapsed;
+                //restColonBlock.Visibility = Visibility.Visible;
+                //workColonBlock.Visibility = Visibility.Collapsed;
             }
         }
 
@@ -191,11 +191,11 @@ namespace Promodoro
 
                 workMinuteBlock.Visibility = Visibility.Visible;
                 workSecondBlock.Visibility = Visibility.Visible;
-                workColonBlock.Visibility = Visibility.Visible;
+               // workColonBlock.Visibility = Visibility.Visible;
                 btnStartWork.Visibility = Visibility.Visible;
                 restMinuteBlock.Visibility = Visibility.Collapsed;
                 restSecondBlock.Visibility = Visibility.Collapsed;
-                restColonBlock.Visibility = Visibility.Collapsed;
+               // restColonBlock.Visibility = Visibility.Collapsed;
             }
         }
 
