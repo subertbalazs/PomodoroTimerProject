@@ -345,8 +345,8 @@
     <AppxPackagedFile Include="C:\DEV\CKeritesProjects\TimerEm2\TimerEm2\Assets\beep-03.wav">
       <PackagePath>Assets\beep-03.wav</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\DEV\CKeritesProjects\TimerEm2\TimerEm2\Properties\Default.rd.xml">
-      <PackagePath>Properties\Default.rd.xml</PackagePath>
+    <AppxPackagedFile Include="C:\DEV\CKeritesProjects\TimerEm2\TimerEm2\Assets\pause-button-outline_318-40569.png">
+      <PackagePath>Assets\pause-button-outline_318-40569.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\DEV\CKeritesProjects\TimerEm2\TimerEm2\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
@@ -374,6 +374,9 @@
     <AppxPackagedFile Include="C:\DEV\CKeritesProjects\TimerEm2\TimerEm2\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\DEV\CKeritesProjects\TimerEm2\TimerEm2\Properties\Default.rd.xml">
+      <PackagePath>Properties\Default.rd.xml</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\DEV\CKeritesProjects\TimerEm2\TimerEm2\bin\x86\Debug\TimerEm2.xr.xml">
       <PackagePath>TimerEm2.xr.xml</PackagePath>

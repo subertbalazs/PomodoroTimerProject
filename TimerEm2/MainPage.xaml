@@ -8,20 +8,41 @@
     mc:Ignorable="d">
 
     <Grid Background="#FFFFFFFF">
-        <Button x:Name="stopButton" Content="Stop" HorizontalAlignment="Left" Margin="23,324,0,0" VerticalAlignment="Top" Click="stopButton_Click" FontSize="40" Width="138" FontFamily="Courier New" FontWeight="Bold"/>
-        <Button x:Name="btnStartWork" Content="Start" HorizontalAlignment="Left" Margin="191,324,0,0" VerticalAlignment="Top" Click="startButton_Click" FontSize="40" Width="140" FontFamily="Courier New" FontWeight="Bold"/>
-        <TextBlock x:Name="workSecondBlock" HorizontalAlignment="Left" Margin="191,147,-18,0" TextWrapping="Wrap" Text="00" VerticalAlignment="Top" FontSize="133.333" Width="187" Foreground="#FFF90101" FontFamily="Courier New" FontWeight="Bold"/>
-        <TextBlock x:Name="workMinuteBlock" HorizontalAlignment="Left" Margin="-1,147,0,0" TextWrapping="Wrap" Text="25" VerticalAlignment="Top" FontSize="133.333" Width="165" Height="177" Foreground="#FFFB1700" FontFamily="Courier New" FontWeight="Bold"/>
-        <TextBlock x:Name="workColonBlock" HorizontalAlignment="Left" Margin="135,138,0,0" TextWrapping="Wrap" Text=":" VerticalAlignment="Top" FontSize="133.333" Foreground="#FFF91701" FontFamily="Courier New" FontWeight="Bold"/>
-        <TextBlock x:Name="restSecondBlock" HorizontalAlignment="Left" Margin="192,147,-9,0" TextWrapping="Wrap" Text="00" VerticalAlignment="Top" FontSize="133.333" Foreground="#FF00AA10" FontFamily="Courier New" FontWeight="Bold" Width="177" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
+        <TextBlock x:Name="workMinuteBlock" HorizontalAlignment="Left" Margin="92,147,0,0" TextWrapping="Wrap" Text="25" VerticalAlignment="Top" FontSize="66.667" Width="81" Height="76" Foreground="#FFFB1700" FontFamily="Courier New" FontWeight="Bold"/>
+        <TextBlock x:Name="restMinuteBlock" HorizontalAlignment="Left" Margin="93,147,0,0" TextWrapping="Wrap" Text="05" VerticalAlignment="Top" FontSize="66.667" Foreground="#FF08B000" FontFamily="Courier New" FontWeight="Bold"/>
+        <SplitView x:Name="MySplitview" DisplayMode="CompactOverlay" IsPaneOpen="False" CompactPaneLength="50" Margin="0 0 350 0">
+            <SplitView.Pane>
+                <StackPanel Background="Gray" Margin="0,0,160,0">
+                    <Button x:Name="btnShowPane" FontFamily="Segoe MDL2 Assets" Content="&#xE00F;" Width="50" Height="50" Background="Transparent" Click="BtnShowPane_OnClick"/>
+                    <StackPanel Orientation="Horizontal">
+                        <Button x:Name="Timers_Menu" FontFamily="Segoe MDL2 Assets" Content="&#xE121;" Width="50" Height="50" Background="Transparent"/>
+                        <TextBlock Text="Timers" FontSize="18" VerticalAlignment="Center"/>
+
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Button x:Name="Settings_Menu" FontFamily="Segoe MDL2 Assets" Content="&#xE115;" Width="50" Height="50" Background="Transparent"/>
+                        <TextBlock Text="Settings" FontSize="18" VerticalAlignment="Center"/>
+
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Button x:Name="Misc_Menu" FontFamily="Segoe MDL2 Assets" Content="&#xE1CE;" Width="50" Height="50" Background="Transparent"/>
+                        <TextBlock Text="Misc" FontSize="18" VerticalAlignment="Center"/>
+                    </StackPanel>
+                </StackPanel>
+            </SplitView.Pane>
+        </SplitView>
+        <Button x:Name="stopButton" Content="&#xE103;" HorizontalAlignment="Left" Margin="102,289,0,0" VerticalAlignment="Top" Click="stopButton_Click" FontSize="40" Width="62" FontFamily="Segoe MDL2 Assets" FontWeight="Bold"/>
+        <Button x:Name="btnStartWork" Content="&#xE102;" HorizontalAlignment="Left" Margin="191,289,0,0" VerticalAlignment="Top" Click="startButton_Click" FontSize="40" Width="58" FontFamily="Segoe MDL2 Assets" FontWeight="Bold"/>
+        <TextBlock x:Name="workSecondBlock" HorizontalAlignment="Left" Margin="191,147,-18,0" TextWrapping="Wrap" Text="00" VerticalAlignment="Top" FontSize="66.667" Width="187" Foreground="#FFF90101" FontFamily="Courier New" FontWeight="Bold"/>
+        <TextBlock x:Name="workColonBlock" HorizontalAlignment="Left" Margin="162,141,0,0" TextWrapping="Wrap" Text=":" VerticalAlignment="Top" FontSize="66.667" Foreground="#FFF91701" FontFamily="Courier New" FontWeight="Bold"/>
+        <TextBlock x:Name="restSecondBlock" HorizontalAlignment="Left" Margin="192,147.152,0,0" TextWrapping="Wrap" Text="00" VerticalAlignment="Top" FontSize="66.667" Foreground="#FF00AA10" FontFamily="Courier New" FontWeight="Bold" Width="87.987" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
             <TextBlock.RenderTransform>
                 <CompositeTransform Rotation="-0.196"/>
             </TextBlock.RenderTransform>
         </TextBlock>
-        <TextBlock x:Name="restMinuteBlock" HorizontalAlignment="Left" Margin="0,147,0,0" TextWrapping="Wrap" Text="05" VerticalAlignment="Top" FontSize="133.333" Foreground="#FF08B000" FontFamily="Courier New" FontWeight="Bold"/>
-        <Button x:Name="btnStartRest" Content="Start" HorizontalAlignment="Left" Margin="191,324,0,0" VerticalAlignment="Top" Height="57" Width="140" FontSize="40" Click="btnStartRest_Click" FontFamily="Courier New" FontWeight="Bold" Visibility="Collapsed"/>
-        <TextBlock x:Name="restColonBlock" HorizontalAlignment="Left" Margin="135,139,0,0" TextWrapping="Wrap" Text=":" VerticalAlignment="Top" Foreground="#FF00AA10" FontSize="133.333" FontFamily="Courier New" FontWeight="Bold"/>
-        <CheckBox x:Name="repeaterBox" Content="Repeat timer sequence" HorizontalAlignment="Left" Margin="23,394,0,0" VerticalAlignment="Top" FontSize="20" Width="315" IsChecked="True" FontFamily="Courier New" FontWeight="Bold" Height="82"/>
+        <Button x:Name="btnStartRest" Content="&#xE102;" HorizontalAlignment="Left" Margin="191,324,0,0" VerticalAlignment="Top" Height="52" Width="140" FontSize="40" Click="btnStartRest_Click" FontFamily="Segoe MDL2 Assets" FontWeight="Bold" Visibility="Collapsed"/>
+        <TextBlock x:Name="restColonBlock" HorizontalAlignment="Left" Margin="162,142,0,0" TextWrapping="Wrap" Text=":" VerticalAlignment="Top" Foreground="#FF00AA10" FontSize="66.667" FontFamily="Courier New" FontWeight="Bold"/>
+        <CheckBox x:Name="repeaterBox" Content="Repeat timer sequence" HorizontalAlignment="Left" Margin="23,394,0,0" VerticalAlignment="Top" FontSize="20" Width="315" IsChecked="True" FontFamily="Courier New" FontWeight="Bold" Height="37"/>
         <MediaElement x:Name="mediaElement" HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="100" Source="Assets/beep-03.wav" AutoPlay="False"/>
 
     </Grid>

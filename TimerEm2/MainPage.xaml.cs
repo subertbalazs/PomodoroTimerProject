@@ -52,14 +52,14 @@ namespace Promodoro
         private void WorkTimer_Tick(object sender, object e)
         {
             WorkMinuteChanger();
-            WorkTimeIncrementer();
+            WorkSecondDecrementer();
             WorkEndChecker();
         }
 
         private void RestTimer_Tick(object sender, object e)
         {
             RestMinuteChanger();
-            RestTimeIncrementer();
+            RestSecondDecrementer();
             TimerSequenceRepeater();
         }
 
@@ -84,12 +84,12 @@ namespace Promodoro
             if (workCurrentSecondCount == -1)
             {
                 workCurrentSecondCount = workStarterSecondCount;
-                WorkMinuteIncrementer();
+                WorkMinuteDecrementer();
                 IsItLessThenTenWorkMinute();
             }
         }
 
-        private void WorkMinuteIncrementer()
+        private void WorkMinuteDecrementer()
         {
             workCurrentMinuteCount--;
         }
@@ -99,17 +99,17 @@ namespace Promodoro
             if (restCurrentSecondCount == -1)
             {
                 restCurrentSecondCount = restStarterSecondCount;
-                RestMinuteIncrementer();
+                RestMinuteDecrementer();
                 IsItLessThenTenRestMinute();
             }
         }
 
-        private void RestMinuteIncrementer()
+        private void RestMinuteDecrementer()
         {
                restCurrentMinuteCount--;
         }
 
-        private void WorkTimeIncrementer()
+        private void WorkSecondDecrementer()
         {
             if (workCurrentSecondCount < 10)
             {
@@ -121,7 +121,7 @@ namespace Promodoro
             }
         }
 
-        private void RestTimeIncrementer()
+        private void RestSecondDecrementer()
         {
             if (restCurrentSecondCount < 10)
             {
@@ -209,6 +209,19 @@ namespace Promodoro
             {
                 RestEndChecker();
                 workTimer.Stop();
+            }
+        }
+
+        private void BtnShowPane_OnClick(object sender, RoutedEventArgs e)
+        {
+            MySplitview.IsPaneOpen =!MySplitview.IsPaneOpen;
+            if (MySplitview.IsPaneOpen)
+            {
+            btnShowPane.Content = "\uE00E"; //<
+            }
+            else
+            {
+            btnShowPane.Content = "\uE00F"; //>
             }
         }
     }
