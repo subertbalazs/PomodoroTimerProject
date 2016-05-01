@@ -13,6 +13,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using TimerEm2;
 
 
 namespace Promodoro
@@ -23,15 +24,6 @@ namespace Promodoro
 
         DispatcherTimer restTimer = new DispatcherTimer();
 
-        static int workStarterSecondCount = 5;
-        static int workStarterMinuteCount = 1;
-        int workCurrentSecondCount;
-        int workCurrentMinuteCount = workStarterMinuteCount;
-
-        static int restStarterSecondCount = 5;
-        static int restStarterMinuteCount = 1;
-        int restCurrentSecondCount;
-        int restCurrentMinuteCount = restStarterMinuteCount;
 
         public MainPage()
         {
@@ -45,21 +37,21 @@ namespace Promodoro
 
             restMinuteBlock.Visibility = Visibility.Collapsed;
             restSecondBlock.Visibility = Visibility.Collapsed;
-            //restColonBlock.Visibility = Visibility.Collapsed;
-
-        }
+         }
 
         private void WorkTimer_Tick(object sender, object e)
         {
-            WorkMinuteChanger();
-            WorkSecondDecrementer();
+            TimerLogic.WorkMinuteChanger();
+            TimerLogic.IsItLessThenTenWorkMinute(workMinuteBlock);
+            TimerLogic.WorkSecondDecrementer(workSecondBlock);
             WorkEndChecker();
         }
 
         private void RestTimer_Tick(object sender, object e)
         {
-            RestMinuteChanger();
-            RestSecondDecrementer();
+            TimerLogic.RestMinuteChanger();
+            TimerLogic.IsItLessThenTenRestMinute(restMinuteBlock);
+            TimerLogic.RestSecondDecrementer(restSecondBlock);
             TimerSequenceRepeater();
         }
 
@@ -79,127 +71,44 @@ namespace Promodoro
             restTimer.Start();
         }
 
-        private void WorkMinuteChanger()
+        public void WBAppearer()
         {
-            if (workCurrentSecondCount == -1)
+            TimerLogic.TextBlockAppearer(workMinuteBlock, workSecondBlock, restMinuteBlock, restSecondBlock);
+            TimerLogic.BtnAppearer(btnStartRest, btnStartWork);
+            TimerLogic.StarterStopper(mediaElement);
+            restTimer.Stop();
+            workTimer.Start();
+        }
+
+        public void RBAppearer()
+        {
+            TimerLogic.TextBlockAppearer(restMinuteBlock, restSecondBlock, workMinuteBlock, workSecondBlock);
+            TimerLogic.BtnAppearer(btnStartWork, btnStartRest);
+            TimerLogic.StarterStopper(mediaElement);
+            workTimer.Stop();
+            restTimer.Start();
+        }
+
+        public void WorkEndChecker()
+        {
+            if (TimerLogic.workCurrentMinuteCount == 0 && TimerLogic.workCurrentSecondCount == -1)
             {
-                workCurrentSecondCount = workStarterSecondCount;
-                WorkMinuteDecrementer();
-                IsItLessThenTenWorkMinute();
+
+                TimerLogic.workCurrentMinuteCount = TimerLogic.workStarterMinuteCount;
+                RBAppearer();
             }
         }
 
-        private void WorkMinuteDecrementer()
+        public void RestEndChecker()
         {
-            workCurrentMinuteCount--;
-        }
-
-        private void RestMinuteChanger()
-        {
-            if (restCurrentSecondCount == -1)
+            if (TimerLogic.restCurrentMinuteCount == 0 && TimerLogic.restCurrentSecondCount == -1)
             {
-                restCurrentSecondCount = restStarterSecondCount;
-                RestMinuteDecrementer();
-                IsItLessThenTenRestMinute();
+                TimerLogic.restCurrentMinuteCount = TimerLogic.restStarterMinuteCount;
+                WBAppearer();
             }
         }
 
-        private void RestMinuteDecrementer()
-        {
-               restCurrentMinuteCount--;
-        }
-
-        private void WorkSecondDecrementer()
-        {
-            if (workCurrentSecondCount < 10)
-            {
-                workSecondBlock.Text = "0" + workCurrentSecondCount--.ToString();
-            }
-            else
-            {
-                workSecondBlock.Text = workCurrentSecondCount--.ToString();
-            }
-        }
-
-        private void RestSecondDecrementer()
-        {
-            if (restCurrentSecondCount < 10)
-            {
-                restSecondBlock.Text = "0" + restCurrentSecondCount--.ToString();
-            }
-            else
-            {
-                restSecondBlock.Text = restCurrentSecondCount--.ToString();
-            }
-        }
-
-        private void IsItLessThenTenWorkMinute()
-        {
-            if (workCurrentMinuteCount < 10)
-            {
-                workMinuteBlock.Text = "0" + workCurrentMinuteCount.ToString();
-            }
-            else
-            {
-                workMinuteBlock.Text = workCurrentMinuteCount.ToString();
-            }
-        }
-
-        private void IsItLessThenTenRestMinute()
-        {
-            if (restCurrentMinuteCount < 10)
-            {
-                restMinuteBlock.Text = "0" + restCurrentMinuteCount.ToString();
-            }
-            else
-            {
-                restMinuteBlock.Text = restCurrentMinuteCount.ToString();
-            }
-        }
-    
-        private void WorkEndChecker()
-        {
-            if (workCurrentMinuteCount == 0 && workCurrentSecondCount == -1)
-            {
-                mediaElement.Play();
-                workTimer.Stop();
-                workCurrentMinuteCount = workStarterMinuteCount;
-
-                restTimer.Start();
-                btnStartWork.Visibility = Visibility.Collapsed;
-                btnStartRest.Visibility = Visibility.Visible;
-                workMinuteBlock.Visibility = Visibility.Collapsed;
-                workSecondBlock.Visibility = Visibility.Collapsed;
-                restMinuteBlock.Visibility = Visibility.Visible;
-                restSecondBlock.Visibility = Visibility.Visible;
-                //restColonBlock.Visibility = Visibility.Visible;
-                //workColonBlock.Visibility = Visibility.Collapsed;
-            }
-        }
-
-        private void RestEndChecker()
-        {
-            if (restCurrentMinuteCount == 0 && restCurrentSecondCount == -1)
-            {
-                mediaElement.Play();
-                restTimer.Stop();
-                restCurrentMinuteCount = restStarterMinuteCount;
-
-                workTimer.Start();
-                btnStartRest.Visibility = Visibility.Collapsed;
-                btnStartWork.Visibility = Visibility.Visible;
-
-                workMinuteBlock.Visibility = Visibility.Visible;
-                workSecondBlock.Visibility = Visibility.Visible;
-               // workColonBlock.Visibility = Visibility.Visible;
-                btnStartWork.Visibility = Visibility.Visible;
-                restMinuteBlock.Visibility = Visibility.Collapsed;
-                restSecondBlock.Visibility = Visibility.Collapsed;
-               // restColonBlock.Visibility = Visibility.Collapsed;
-            }
-        }
-
-        private void TimerSequenceRepeater()
+        public void TimerSequenceRepeater()
         {
             if (repeaterBox.IsChecked.Value)
             {
@@ -214,15 +123,16 @@ namespace Promodoro
 
         private void BtnShowPane_OnClick(object sender, RoutedEventArgs e)
         {
-            MySplitview.IsPaneOpen =!MySplitview.IsPaneOpen;
+            MySplitview.IsPaneOpen = !MySplitview.IsPaneOpen;
             if (MySplitview.IsPaneOpen)
             {
-            btnShowPane.Content = "\uE00E"; //<
+                btnShowPane.Content = "\uE00E"; //<
             }
             else
             {
-            btnShowPane.Content = "\uE00F"; //>
+                btnShowPane.Content = "\uE00F"; //>
             }
         }
+
     }
 }
