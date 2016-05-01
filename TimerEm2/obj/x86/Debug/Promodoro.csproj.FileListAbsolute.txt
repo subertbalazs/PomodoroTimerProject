@@ -194,3 +194,8 @@ C:\DEV\CKeritesProjects\TimerEm2\TimerEm2\obj\x86\Debug\qualifiers.txt.intermedi
 C:\DEV\CKeritesProjects\TimerEm2\TimerEm2\obj\x86\Debug\MultipleQualifiersPerDimensionFound.txt
 C:\DEV\CKeritesProjects\TimerEm2\TimerEm2\obj\x86\Debug\ProjectArchitectures.txt
 C:\DEV\CKeritesProjects\TimerEm2\TimerEm2\obj\x86\Debug\Promodoro.csprojResolveAssemblyReference.cache
+C:\DEV\CKeritesProjects\TimerEm2\TimerEm2\bin\x86\Debug\NewTimer.xbf
+C:\DEV\CKeritesProjects\TimerEm2\TimerEm2\obj\x86\Debug\NewTimer.g.i.cs
+C:\DEV\CKeritesProjects\TimerEm2\TimerEm2\obj\x86\Debug\NewTimer.g.cs
+C:\DEV\CKeritesProjects\TimerEm2\TimerEm2\obj\x86\Debug\NewTimer.xaml
+C:\DEV\CKeritesProjects\TimerEm2\TimerEm2\obj\x86\Debug\NewTimer.xbf

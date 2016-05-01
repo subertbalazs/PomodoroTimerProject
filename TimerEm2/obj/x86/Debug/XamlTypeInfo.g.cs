@@ -132,15 +132,17 @@ namespace TimerEm2.Promodoro_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[3];
+            _typeNameTable = new string[4];
             _typeNameTable[0] = "Promodoro.MainPage";
             _typeNameTable[1] = "Windows.UI.Xaml.Controls.Page";
             _typeNameTable[2] = "Windows.UI.Xaml.Controls.UserControl";
+            _typeNameTable[3] = "TimerEm2.NewTimer";
 
-            _typeTable = new global::System.Type[3];
+            _typeTable = new global::System.Type[4];
             _typeTable[0] = typeof(global::Promodoro.MainPage);
             _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.Page);
             _typeTable[2] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
+            _typeTable[3] = typeof(global::TimerEm2.NewTimer);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -176,6 +178,7 @@ namespace TimerEm2.Promodoro_XamlTypeInfo
         }
 
         private object Activate_0_MainPage() { return new global::Promodoro.MainPage(); }
+        private object Activate_3_NewTimer() { return new global::TimerEm2.NewTimer(); }
 
         private global::Windows.UI.Xaml.Markup.IXamlType CreateXamlType(int typeIndex)
         {
@@ -200,6 +203,13 @@ namespace TimerEm2.Promodoro_XamlTypeInfo
 
             case 2:   //  Windows.UI.Xaml.Controls.UserControl
                 xamlType = new global::TimerEm2.Promodoro_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 3:   //  TimerEm2.NewTimer
+                userType = new global::TimerEm2.Promodoro_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_3_NewTimer;
+                userType.SetIsLocalType();
+                xamlType = userType;
                 break;
             }
             return xamlType;

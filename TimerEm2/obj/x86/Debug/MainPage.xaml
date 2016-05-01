@@ -10,24 +10,24 @@
     <Grid Background="#FFFFFFFF">
         <Ellipse Width="300" Height="300" Fill="Gray"></Ellipse>
         <Ellipse Width="292" Height="292" Fill="White"></Ellipse>
-        <TextBlock x:ConnectionId='1' x:Name="workMinuteBlock" HorizontalAlignment="Left" Margin="176,269,0,0" TextWrapping="Wrap" Text="25" VerticalAlignment="Top" FontSize="93.333" Width="122" Height="126" Foreground="#FFFB1700" FontFamily="Courier New"/>
-        <TextBlock x:ConnectionId='2' x:Name="restMinuteBlock" HorizontalAlignment="Left" Margin="176,269,0,0" TextWrapping="Wrap" Text="05" VerticalAlignment="Top" FontSize="93.333" Foreground="#FF08B000" FontFamily="Courier New"/>
+        <TextBlock x:ConnectionId='1' x:Name="workMinuteBlock" HorizontalAlignment="Left" Margin="176,269,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" FontSize="93.333" Width="122" Height="126" Foreground="#FFFB1700" FontFamily="Courier New"/>
+        <TextBlock x:ConnectionId='2' x:Name="restMinuteBlock" HorizontalAlignment="Left" Margin="176,269,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" FontSize="93.333" Foreground="#FF08B000" FontFamily="Courier New"/>
         <SplitView x:ConnectionId='3' x:Name="MySplitview" DisplayMode="CompactOverlay" IsPaneOpen="False" CompactPaneLength="50" Margin="0 0 350 0">
             <SplitView.Pane>
                 <StackPanel Background="Gray" Margin="0,0,160,0">
-                    <Button x:ConnectionId='11' x:Name="btnShowPane" FontFamily="Segoe MDL2 Assets" Content="&#xE00F;" Width="50" Height="50" Background="Transparent"                            />
+                    <Button x:ConnectionId='12' x:Name="btnShowPane" FontFamily="Segoe MDL2 Assets" Content="&#xE00F;" Width="50" Height="50" Background="Transparent"                            />
                     <StackPanel Orientation="Horizontal">
-                        <Button x:ConnectionId='14' x:Name="Timers_Menu" FontFamily="Segoe MDL2 Assets" Content="&#xE121;" Width="50" Height="50" Background="Transparent"/>
-                        <TextBlock Text="Timers" FontSize="18" VerticalAlignment="Center"/>
+                        <Button x:ConnectionId='15' x:Name="New_Timer_Menu" FontFamily="Segoe MDL2 Assets" Content="&#xE121;" Width="50" Height="50" Background="Transparent"                          />
+                        <TextBlock Text="NewTimer" FontSize="18" FontFamily= "Currier New" VerticalAlignment="Center"/>
 
                     </StackPanel>
                     <StackPanel Orientation="Horizontal">
-                        <Button x:ConnectionId='13' x:Name="Settings_Menu" FontFamily="Segoe MDL2 Assets" Content="&#xE115;" Width="50" Height="50" Background="Transparent"/>
+                        <Button x:ConnectionId='14' x:Name="Settings_Menu" FontFamily="Segoe MDL2 Assets" Content="&#xE115;" Width="50" Height="50" Background="Transparent"/>
                         <TextBlock Text="Settings" FontSize="18" VerticalAlignment="Center"/>
 
                     </StackPanel>
                     <StackPanel Orientation="Horizontal">
-                        <Button x:ConnectionId='12' x:Name="Other_Menu" FontFamily="Segoe MDL2 Assets" Content="&#xE1CE;" Width="50" Height="50" Background="Transparent"/>
+                        <Button x:ConnectionId='13' x:Name="Other_Menu" FontFamily="Segoe MDL2 Assets" Content="&#xE1CE;" Width="50" Height="50" Background="Transparent"/>
                         <TextBlock Text="Other" FontSize="18" VerticalAlignment="Center"/>
                     </StackPanel>
                 </StackPanel>
@@ -36,15 +36,15 @@
         <Button x:ConnectionId='4' x:Name="stopButton" Content="&#xE103;" HorizontalAlignment="Left" Margin="156,475,0,0" VerticalAlignment="Top"                          FontSize="40" Width="120" FontFamily="Segoe MDL2 Assets" FontWeight="Bold"/>
         <Button x:ConnectionId='5' x:Name="btnStartWork" Content="&#xE102;" HorizontalAlignment="Left" Margin="282,475,0,0" VerticalAlignment="Top"                           FontSize="40" Width="58" FontFamily="Segoe MDL2 Assets" FontWeight="Bold"/>
         <TextBlock x:ConnectionId='6' x:Name="workSecondBlock" HorizontalAlignment="Left" Margin="275,251,-9,0" TextWrapping="Wrap" Text="00" VerticalAlignment="Top" FontSize="66.667" Width="94" Foreground="#FFF90101" FontFamily="Courier New"/>
-        <TextBlock x:ConnectionId='7' x:Name="restSecondBlock" HorizontalAlignment="Left" Margin="276,251.152,-3.987,0" TextWrapping="Wrap" Text="00" VerticalAlignment="Top" FontSize="66.667" Foreground="#FF00AA10" FontFamily="Courier New" Width="87.987" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
+        <TextBlock x:ConnectionId='7' x:Name="restSecondBlock" HorizontalAlignment="Left" Margin="276,251.152,-3.987,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" FontSize="66.667" Foreground="#FF00AA10" FontFamily="Courier New" Width="87.987" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
             <TextBlock.RenderTransform>
                 <CompositeTransform Rotation="-0.196"/>
             </TextBlock.RenderTransform>
         </TextBlock>
         <Button x:ConnectionId='8' x:Name="btnStartRest" Content="&#xE102;" HorizontalAlignment="Left" Margin="282,475,0,0" VerticalAlignment="Top" Height="52" Width="58" FontSize="40"                            FontFamily="Segoe MDL2 Assets" FontWeight="Bold" Visibility="Collapsed"/>
         <CheckBox x:ConnectionId='9' x:Name="repeaterBox" Content="Repeat timer&#xD;&#xA;sequence" HorizontalAlignment="Left" Margin="157,532,-64,0" VerticalAlignment="Top" FontSize="18.667" Width="267" IsChecked="True" FontFamily="Courier New" FontWeight="Bold" Height="69"/>
-        <MediaElement x:ConnectionId='10' x:Name="mediaElement" HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="100" Source="Assets/beep-03.wav" AutoPlay="False"/>
-
+        <MediaElement x:ConnectionId='10' x:Name="mediaElement" HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="100" Source="Assets/beep-03.wav" AutoPlay="False" Margin="198,0,0,0"/>
+        <Frame x:ConnectionId='11' Name = "MainFrame"></Frame>
     </Grid>
 </Page>
 
