@@ -8,12 +8,11 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <ComboBox x:Name="cbWork" HorizontalAlignment="Left" Margin="152,216,0,0" VerticalAlignment="Top" Width="198"/>
-        <ComboBox x:Name="cbRest" HorizontalAlignment="Left" Margin="152,276,0,0" VerticalAlignment="Top" Width="198"/>
+        <ComboBox x:Name="cbWork" HorizontalAlignment="Left" Margin="152,216,0,0" VerticalAlignment="Top" Width="198" SelectionChanged="cbWork_SelectionChanged"/>
+        <ComboBox x:Name="cbRest" HorizontalAlignment="Left" Margin="152,276,0,0" VerticalAlignment="Top" Width="198" SelectionChanged="cbRest_SelectionChanged"/>
         <TextBlock x:Name="tbWork" HorizontalAlignment="Left" Margin="10,221,0,0" TextWrapping="Wrap" Text="Work interval" VerticalAlignment="Top" Width="142" FontFamily="Courier New"/>
         <TextBlock x:Name="tbRest" HorizontalAlignment="Left" Margin="10,281,0,0" TextWrapping="Wrap" Text="Rest interval" VerticalAlignment="Top" Width="142" Height="27" FontFamily="Courier New"/>
         <TextBlock x:Name="tbIntervals" HorizontalAlignment="Left" Margin="9,338,0,0" TextWrapping="Wrap" Text="Number of Intervals" VerticalAlignment="Top" Width="184" FontFamily="Courier New"/>
-        <ComboBox x:Name="cbIntevals" HorizontalAlignment="Left" Margin="198,333,0,0" VerticalAlignment="Top" Width="152"/>
         <CheckBox x:Name="checkBox" Content="Notification sound" HorizontalAlignment="Left" Margin="39,401,0,0" VerticalAlignment="Top" FontFamily="Courier New"/>
         <CheckBox x:Name="cbEndSound" Content="End sound" HorizontalAlignment="Left" Margin="39,453,0,0" VerticalAlignment="Top" FontFamily="Courier New"/>
         <TextBox x:Name="textBox" HorizontalAlignment="Left" Margin="10,158,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="340"/>
@@ -21,6 +20,7 @@
         <Button x:Name="button" Content="Save" HorizontalAlignment="Left" Margin="39,518,0,0" VerticalAlignment="Top" Width="120"/>
         <Button x:Name="button1" Content="Back" HorizontalAlignment="Left" Margin="191,518,0,0" VerticalAlignment="Top" Width="121" Click="button1_Click"/>
         <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="10,28,0,0" TextWrapping="Wrap" Text="New Timer" VerticalAlignment="Top" FontSize="48" FontFamily="Courier New"/>
-        <Frame Name="NewTimerFrame"></Frame>
+        <TextBox x:Name="textBox1" HorizontalAlignment="Left" Margin="279,323,0,0" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" TextAlignment="Right"/>
+        <!--<Frame Name="NewTimerFrame" ></Frame>-->
     </Grid>
 </Page>

@@ -24,11 +24,23 @@ namespace TimerEm2
         public NewTimer()
         {
             this.InitializeComponent();
+            Timer.ComboFiller(cbWork);
+            Timer.ComboFiller(cbRest);
         }
 
         private void button1_Click(object sender, RoutedEventArgs e)
         {
             NewTimerFrame.Navigate(typeof (MainPage));
+        }
+
+        private void cbWork_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            
+        }
+
+        private void cbRest_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
         }
     }
 }

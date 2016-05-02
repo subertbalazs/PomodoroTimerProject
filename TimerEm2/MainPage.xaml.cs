@@ -137,6 +137,8 @@ namespace Promodoro
         private void Timers_Menu_Click(object sender, RoutedEventArgs e)
         {
             MainFrame.Navigate(typeof (NewTimer));
+            workTimer.Stop();
+            restTimer.Stop();
         }
     }
 }
