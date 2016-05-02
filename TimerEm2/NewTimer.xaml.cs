@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -21,14 +22,43 @@ namespace TimerEm2
 
     public sealed partial class NewTimer : Page
     {
+        public static List<Timer> Timers = new List<Timer>(); 
+
         public NewTimer()
         {
             this.InitializeComponent();
-            Timer.ComboFiller(cbWork);
-            Timer.ComboFiller(cbRest);
+            Timer.IntervalMinuteComboFiller(cbWork);
+            Timer.IntervalMinuteComboFiller(cbRest);
+            Timer.NumberOfintervalComboFiller(cbIntervals);
         }
 
-        private void button1_Click(object sender, RoutedEventArgs e)
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                if (nameBox.Text != "")
+                {
+                    Timers.Add(new Timer(nameBox.Text, cbWork.SelectedIndex, cbRest.SelectedIndex, cbIntervals.SelectedIndex,
+                                        endSound: false, notSound: false));
+                    NewTimerFrame.Navigate(typeof (MainPage));
+                }
+            }
+            catch (Exception)
+            {
+
+                nameBox.PlaceholderText = "Name field is empty.";
+            }
+        }
+
+        public static void TimerChooserComboFiller(ComboBox c)
+        {
+            foreach (var i in Timers)
+            {
+                c.Items.Add(i); // the combo should list the names, not the instances.
+            }
+        }
+
+        private void btnBackNT_Click(object sender, RoutedEventArgs e)
         {
             NewTimerFrame.Navigate(typeof (MainPage));
         }
@@ -42,5 +72,6 @@ namespace TimerEm2
         {
 
         }
+
     }
 }

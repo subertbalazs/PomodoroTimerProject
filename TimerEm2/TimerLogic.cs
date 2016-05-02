@@ -22,6 +22,7 @@ namespace TimerEm2
         public static int restCurrentSecondCount;
         public static int restCurrentMinuteCount = restStarterMinuteCount;
 
+        
         public static void WorkMinuteChanger()
         {
             if (workCurrentSecondCount == -1)

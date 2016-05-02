@@ -37,6 +37,7 @@ namespace Promodoro
 
             restMinuteBlock.Visibility = Visibility.Collapsed;
             restSecondBlock.Visibility = Visibility.Collapsed;
+            NewTimer.TimerChooserComboFiller(cbTimerChooser);
          }
 
         private void WorkTimer_Tick(object sender, object e)
@@ -140,5 +141,6 @@ namespace Promodoro
             workTimer.Stop();
             restTimer.Stop();
         }
+
     }
 }

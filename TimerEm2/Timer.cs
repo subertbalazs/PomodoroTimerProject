@@ -7,10 +7,26 @@ using Windows.UI.Xaml.Controls;
 
 namespace TimerEm2
 {
-    class Timer
+    public class Timer
     {
+        private string name;
+        private int workInterval;
+        private int restInterval;
+        private int nbrOfIntervals;
+        private bool notSound;
+        private bool endSound;
+
+        public Timer(string name, int workInterval, int restInterval, int nbrOfIntervals, bool notSound, bool endSound)
+        {
+            this.name = name;
+            this.workInterval = workInterval;
+            this.restInterval = restInterval;
+            this.nbrOfIntervals = nbrOfIntervals;
+            this.notSound = notSound;
+            this.endSound = endSound;
+        }
         
-        public static void ComboFiller(ComboBox c)
+        public static void IntervalMinuteComboFiller(ComboBox c)
         {
 
             Dictionary<string, int> minutesDictionary = new Dictionary<string, int>();
@@ -27,5 +43,17 @@ namespace TimerEm2
                 c.Items.Add(i.Key);
             }
         }
+
+        public static void NumberOfintervalComboFiller(ComboBox c)
+        {
+            List<int> numberOfIntervalList = new List<int>() {1, 2, 3, 4, 5, 6, 7, 8, 9};
+
+            foreach (var i in numberOfIntervalList)
+            {
+                c.Items.Add(i);
+            }
+        }
+
+     
     }
 }

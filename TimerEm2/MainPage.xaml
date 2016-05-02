@@ -43,7 +43,9 @@
         </TextBlock>
         <Button x:Name="btnStartRest" Content="&#xE102;" HorizontalAlignment="Left" Margin="282,475,0,0" VerticalAlignment="Top" Height="52" Width="58" FontSize="40" Click="btnStartRest_Click" FontFamily="Segoe MDL2 Assets" FontWeight="Bold" Visibility="Collapsed"/>
         <CheckBox x:Name="repeaterBox" Content="Repeat timer&#xD;&#xA;sequence" HorizontalAlignment="Left" Margin="157,532,-64,0" VerticalAlignment="Top" FontSize="18.667" Width="267" IsChecked="True" FontFamily="Courier New" FontWeight="Bold" Height="69"/>
+        <ComboBox x:Name="cbTimerChooser" HorizontalAlignment="Left" Margin="114,63,-24,0" VerticalAlignment="Top" Width="270"/>
         <MediaElement x:Name="mediaElement" HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="100" Source="Assets/beep-03.wav" AutoPlay="False" Margin="198,0,0,0"/>
-        <Frame Name = "MainFrame"></Frame>
+        <Frame Name = "MainFrame">
+        </Frame>
     </Grid>
 </Page>
