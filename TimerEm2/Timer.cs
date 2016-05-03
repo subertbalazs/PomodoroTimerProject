@@ -9,21 +9,21 @@ namespace TimerEm2
 {
     public class Timer
     {
-        private string name;
-        private int workInterval;
-        private int restInterval;
-        private int nbrOfIntervals;
-        private bool notSound;
-        private bool endSound;
+        public string Name { get; }
+        public int WorkInterval { get; }
+        public int RestInterval { get; }
+        public int NbrOfIntervals { get; }
+        public bool NotSound { get; }
+        public bool EndSound { get; }
 
         public Timer(string name, int workInterval, int restInterval, int nbrOfIntervals, bool notSound, bool endSound)
         {
-            this.name = name;
-            this.workInterval = workInterval;
-            this.restInterval = restInterval;
-            this.nbrOfIntervals = nbrOfIntervals;
-            this.notSound = notSound;
-            this.endSound = endSound;
+            Name = name;
+            WorkInterval = workInterval;
+            RestInterval = restInterval;
+            NbrOfIntervals = nbrOfIntervals;
+            NotSound = notSound;
+            EndSound = endSound;
         }
         
         public static void IntervalMinuteComboFiller(ComboBox c)

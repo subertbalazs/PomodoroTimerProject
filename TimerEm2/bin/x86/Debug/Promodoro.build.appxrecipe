@@ -9,16 +9,16 @@
     <SolutionConfiguration>Debug|x86</SolutionConfiguration>
     <PackageArchitecture>x86</PackageArchitecture>
     <PackageIdentityName>a88d78aa-d550-4b63-9a1d-464a05566c12</PackageIdentityName>
-    <IntermediateOutputPath>C:\DEV\CKeritesProjects\TimerEm2\TimerEm2\obj\x86\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\DEV\CKeritesProjects\PromodoroTimerProject\TimerEm2\obj\x86\Debug\</IntermediateOutputPath>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\DEV\CKeritesProjects\TimerEm2\TimerEm2\bin\x86\Debug\Core\AppxManifest.xml">
+    <AppXManifest Include="C:\DEV\CKeritesProjects\PromodoroTimerProject\TimerEm2\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\DEV\CKeritesProjects\TimerEm2\TimerEm2\bin\x86\Debug\TimerEm2.exe">
+    <AppxPackagedFile Include="C:\DEV\CKeritesProjects\PromodoroTimerProject\TimerEm2\bin\x86\Debug\TimerEm2.exe">
       <PackagePath>entrypoint\TimerEm2.exe</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Balázs\.nuget\packages\Microsoft.ApplicationInsights\1.0.0\lib\portable-win81+wpa81\Microsoft.ApplicationInsights.dll">
@@ -339,55 +339,55 @@
     <AppxPackagedFile Include="C:\Users\Balázs\.nuget\packages\System.Xml.XmlSerializer\4.0.10\lib\netcore50\System.Xml.XmlSerializer.dll">
       <PackagePath>System.Xml.XmlSerializer.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\DEV\CKeritesProjects\TimerEm2\TimerEm2\ApplicationInsights.config">
+    <AppxPackagedFile Include="C:\DEV\CKeritesProjects\PromodoroTimerProject\TimerEm2\ApplicationInsights.config">
       <PackagePath>ApplicationInsights.config</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\DEV\CKeritesProjects\TimerEm2\TimerEm2\Assets\beep-03.wav">
+    <AppxPackagedFile Include="C:\DEV\CKeritesProjects\PromodoroTimerProject\TimerEm2\Assets\beep-03.wav">
       <PackagePath>Assets\beep-03.wav</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\DEV\CKeritesProjects\TimerEm2\TimerEm2\Assets\pause-button-outline_318-40569.png">
+    <AppxPackagedFile Include="C:\DEV\CKeritesProjects\PromodoroTimerProject\TimerEm2\Assets\pause-button-outline_318-40569.png">
       <PackagePath>Assets\pause-button-outline_318-40569.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\DEV\CKeritesProjects\TimerEm2\TimerEm2\Assets\LockScreenLogo.scale-200.png">
+    <AppxPackagedFile Include="C:\DEV\CKeritesProjects\PromodoroTimerProject\TimerEm2\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\DEV\CKeritesProjects\TimerEm2\TimerEm2\Assets\SplashScreen.scale-200.png">
+    <AppxPackagedFile Include="C:\DEV\CKeritesProjects\PromodoroTimerProject\TimerEm2\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\DEV\CKeritesProjects\TimerEm2\TimerEm2\Assets\Square150x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\DEV\CKeritesProjects\PromodoroTimerProject\TimerEm2\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\DEV\CKeritesProjects\TimerEm2\TimerEm2\Assets\Square44x44Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\DEV\CKeritesProjects\PromodoroTimerProject\TimerEm2\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\DEV\CKeritesProjects\TimerEm2\TimerEm2\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+    <AppxPackagedFile Include="C:\DEV\CKeritesProjects\PromodoroTimerProject\TimerEm2\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\DEV\CKeritesProjects\TimerEm2\TimerEm2\Assets\StoreLogo.png">
+    <AppxPackagedFile Include="C:\DEV\CKeritesProjects\PromodoroTimerProject\TimerEm2\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\DEV\CKeritesProjects\TimerEm2\TimerEm2\Assets\Wide310x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\DEV\CKeritesProjects\PromodoroTimerProject\TimerEm2\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\DEV\CKeritesProjects\TimerEm2\TimerEm2\Properties\Default.rd.xml">
+    <AppxPackagedFile Include="C:\DEV\CKeritesProjects\PromodoroTimerProject\TimerEm2\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\DEV\CKeritesProjects\TimerEm2\TimerEm2\bin\x86\Debug\TimerEm2.xr.xml">
+    <AppxPackagedFile Include="C:\DEV\CKeritesProjects\PromodoroTimerProject\TimerEm2\bin\x86\Debug\TimerEm2.xr.xml">
       <PackagePath>TimerEm2.xr.xml</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\DEV\CKeritesProjects\TimerEm2\TimerEm2\bin\x86\Debug\resources.pri">
+    <AppxPackagedFile Include="C:\DEV\CKeritesProjects\PromodoroTimerProject\TimerEm2\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\DEV\CKeritesProjects\TimerEm2\TimerEm2\bin\x86\Debug\Core\TimerEm2.exe">
+    <AppxPackagedFile Include="C:\DEV\CKeritesProjects\PromodoroTimerProject\TimerEm2\bin\x86\Debug\Core\TimerEm2.exe">
       <PackagePath>TimerEm2.exe</PackagePath>
     </AppxPackagedFile>
   </ItemGroup>

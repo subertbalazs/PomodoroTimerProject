@@ -54,7 +54,7 @@ namespace TimerEm2
         {
             foreach (var i in Timers)
             {
-                c.Items.Add(i); // the combo should list the names, not the instances.
+                c.Items.Add(i.Name); // the combo should list the names, not the instances.
             }
         }
 
